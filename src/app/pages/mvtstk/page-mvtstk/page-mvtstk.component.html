@@ -1,0 +1,145 @@
+<div class="col m-3">
+    <div class="row m-3">
+      <div class="col-md-8 p-0">
+        <h1>Mouvements du stock</h1>
+      </div>
+      <div class="col-md-4 p-0 text-right">
+        <app-boutton-action
+        [isImporterVisible]="false"
+        [isNouveauVisible]="false"
+        ></app-boutton-action>
+      </div>
+    </div>
+    
+    <div class="col">
+
+
+      <!--<div class="accordion" id="mvtStkDetails">
+
+        <div class="card">
+          <div class="card-body" id="headingOne">
+            <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </button>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#mvtStkDetails" style="max-height: 300px;
+          overflow-y: scroll">
+            <div class="card-body">
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+            </div>
+          </div>
+        </div>
+         +++++++++++++ 
+        <div class="card">
+          <div class="card-body" id="headingOne1">
+            <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseOne">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </button>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#mvtStkDetails" style="max-height: 300px;
+          overflow-y: scroll">
+            <div class="card-body">
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+            </div>
+          </div>
+        </div>
+
+      </div>-->
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample" style="max-height: 300px;
+          overflow-y: scroll">
+
+            <div class="accordion-body">
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+              <app-detail-mvt-stk></app-detail-mvt-stk>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!--*************-->
+    <div class="accordion" id="accordionExample2">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample" style="max-height: 300px;
+        overflow-y: scroll">
+
+          <div class="accordion-body">
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+            <app-detail-mvt-stk></app-detail-mvt-stk>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+    <div class="row mb-3">
+      <div class=" col-md-12 text-center">
+        <app-pagination></app-pagination>
+      </div>
+    </div>
+  
+  </div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Correction de stock</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          
+          <div class="input-group flex-nowrap">
+            <input type="text" class="form-control" placeholder="Quantite">
+          </div>
+          <div class="input-group flex-nowrap">
+            <select class="form-control">
+              <option>Correction positive</option>
+              <option>Correction negative</option>
+            </select>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fas fa-ban"></i>&nbsp;Annuler</button>
+          <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>

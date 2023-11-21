@@ -1,0 +1,46 @@
+
+  <!--<div class="accordion" id="accordionExample">
+
+    <div class="accordion-item" *ngFor="let menu of menuProperties">
+      <h2 class="accordion-header" id="menu{{menu.id}}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="{{menu.icon}}"></i>&nbsp;
+            {{menu.titre}}
+        </button>
+      </h2>
+
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body" *ngFor="let sousMenu of menu.sousMenu">
+          <a href="javascript:void(0);" (click)="navigate(sousMenu)" style="color: inherit;">
+            <i class="{{sousMenu.icon}}"></i>&nbsp;
+            {{sousMenu.titre}}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>-->
+
+    <div class="accordion" id="accordionExample" data-bs-persist="false">
+      <div class="accordion-item" *ngFor="let menu of menuProperties; let i = index">
+        <h2 class="accordion-header" id="menu{{menu.id}}">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">
+            <i class="{{menu.icon}} blue-color"></i>&nbsp;&nbsp;
+            <div class="blue-color">{{menu.titre}}</div>
+          </button>
+        </h2>
+        <div [id]="'collapse' + i" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body" *ngFor="let sousMenu of menu.sousMenu">
+            <a href="javascript:void(0);" (click)="navigate(sousMenu)" style="color: inherit;">
+              <i class="{{sousMenu.icon}}"></i>&nbsp;
+              {{sousMenu.titre}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+   
